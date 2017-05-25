@@ -1,0 +1,53 @@
+<div class="container">
+
+  <nav class="navbar navbar-light bg-inverse navbar-inverse">
+  <a class="navbar-brand">
+    <img src="./favicon.ico" width="10" height="10" class="d-inline-block align-left" alt="">
+    Angular 2 Custom Pipe
+  </a>
+  </nav>
+
+  <hr/>
+
+  <div class="container"> List of Friends  </div>
+  <div class="container"> Using Built-In Pipes  </div>
+  <hr/>
+  <div *ngFor='let friend of friends'>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hobby</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> {{friend.name | uppercase}} </td>
+      <td> {{friend.hobby | lowercase}} </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <div class="jumbotron"></div>
+
+  <div class="container"> Using Custom Pipes  </div>
+  <hr/>
+  <div *ngFor='let friend of friends'>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hobby</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> {{friend.name | toUpper}} </td>
+      <td> {{friend.hobby | toLower}} </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</div>
